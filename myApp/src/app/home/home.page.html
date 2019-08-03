@@ -1,0 +1,79 @@
+<ion-header >
+  <ion-toolbar style="--background:darkgrey">
+        <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="swipejob-background-color">
+      <ion-card-header>
+        <ion-card-title class="swipejob-job-title">Job Available</ion-card-title>
+      </ion-card-header>
+    </ion-card >
+    <ion-card >
+    <ion-grid>
+        <ion-row>
+            
+            <ion-col size-xs="4" size-md="4" size-lg="2">
+            <img src="{{service.company.logo}}" style="object-fit: contain; width: 112px;height: 112px;">
+            
+            </ion-col>
+            <ion-col size-md="8" size-xs="8" size-lg="10" >
+            <h1 class="swipejobs-service-title" >{{service.title}}</h1>
+            <p class="swipejobs-service-margin">{{service.company.name | uppercase}}</p>
+            <p class="swipejobs-service-margin">{{serviceHourRate | currency:'$': 'symbol':'1.2-2'}}/Hour</p>
+                 <ion-row *ngFor = "let color of shiftDay; let first = first; let last = last">
+                     <ion-col size="6" *ngIf="first"> {{color}} - </ion-col>
+                      <ion-col size="6" *ngIf="last"> {{color}} </ion-col>
+            </ion-row>
+            </ion-col>
+        </ion-row>
+        
+        <ion-row>
+            <ion-col size="12">
+            <p class="swipejobs-service-work">If you take this job you are agreeing to work ALL DAYS</p>
+            </ion-col>
+            <ion-col size="12" class="swipejobs-shift-timings" >
+            <ion-list style="padding: 0;margin:10px;" *ngFor="let shifttimings of servicetime | slice:0:5; let i=index">
+        <ion-label>{{shifttimings}}</ion-label>
+    </ion-list>
+            </ion-col>
+        </ion-row>
+         <hr class="swipejobs-hr">
+        <ion-row>
+            
+            <ion-col size="12">
+                <div>Location</div>
+                 <p class="swipejobs-companyadd">{{service.company.address}}</p>
+            </ion-col>
+        </ion-row>
+          <hr class="swipejobs-hr">
+        <ion-row>
+            <ion-col size="12">
+         <div>Branch</div>
+                <div>{{service.branch}}</div>
+                 <div class="swipejobs-call">{{service.branchPhoneNumber}}</div>
+            </ion-col>
+        </ion-row>
+          <hr class="swipejobs-hr">
+        <ion-row class="swipejobs-margin10">
+            <ion-col size="6" class="swipejobs-btn">
+         NO THANKS
+            </ion-col>
+             <ion-col size="6" class="swipejobs-btn">
+         I`LL TAKE IT
+            </ion-col>
+            
+             
+        
+        </ion-row>
+        
+        
+        </ion-grid>
+    
+    </ion-card>
+</ion-content>
+

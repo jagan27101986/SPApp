@@ -1,0 +1,53 @@
+body{
+    background: grey;
+}
+
+.swipejob-background-color{
+  max-height: 35vh;
+  overflow: hidden;
+    margin:0;
+background: deepskyblue;
+}
+
+.swipejob-job-title{
+    color:#fff;
+        width: 50%;
+    
+}
+
+.swipejobs-service-title{
+    margin: 0px;font-size: 16px;
+}
+
+.swipejobs-service-margin{
+    margin: 1px;
+}
+.swipejobs-service-work{
+    font-weight: bold; font-size: 1rem;color: #000;width: 100%;margin: 0;
+}
+.swipejobs-shift-timings{
+    font-size: 16px;color: grey;margin: 0;
+    padding: 0;
+}
+.swipejobs-hr{
+    border-top:1px solid grey;
+}
+
+.swipejobs-companyadd{
+   text-decoration:underline;color:aqua;font-weight:bold;font-size:16px; 
+}
+
+.swipejobs-call{
+    text-decoration:underline;color:skyblue;font-weight:bold;font-size:16px;
+}
+
+.swipejobs-btn{
+  display: flex;justify-content: center;align-items: center;color:skyblue;font-size:16px;  
+}
+
+.swipejobs-margin10{
+    margin-top:10%;
+    @media only screen and (min-width: 600px) {
+   margin-top:0;
+}
+}
